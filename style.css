@@ -1175,3 +1175,15 @@ h2.no-border {
     color: var(--accent-color);
     text-decoration: underline;
 }
+
+/* Remove background boxes from social icons */
+.social-links a, .social-links a:not(.cv-link), .social-links a.cv-link {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+}
+.social-links a:hover {
+    background: transparent !important;
+    background-color: transparent !important;
+    opacity: 0.7;
+}
