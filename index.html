@@ -3,183 +3,809 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minju Baeck | Interactive CV</title>
-    <style>
-        /* 기본 스타일 및 가로 슬라이드 레이아웃 */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body, html { height: 100%; overflow: hidden; font-family: 'Pretendard', sans-serif; background-color: #fcfcfc; }
-        
-        nav { position: fixed; top: 30px; right: 50px; z-index: 1000; display: flex; gap: 30px; }
-        nav a { text-decoration: none; color: #333; font-weight: 600; font-size: 1rem; text-transform: uppercase; transition: color 0.3s; cursor: pointer; }
-        nav a:hover { color: #2563eb; }
-
-        .main-container { display: flex; width: 400vw; height: 100vh; transition: transform 0.8s cubic-bezier(0.65, 0, 0.35, 1); }
-
-        section { width: 100vw; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 100px; position: relative; }
-        h2.section-bg-title { font-size: 5rem; margin-bottom: 20px; color: #eee; position: absolute; top: 100px; left: 100px; z-index: 0; }
-        .content { max-width: 900px; z-index: 1; width: 100%; }
-
-        /* Publication & Awards 스타일 */
-        .publication-container { text-align: left; overflow-y: auto; max-height: 80vh; padding-right: 20px; }
-        .section-title { font-size: 1.8rem; color: #222; margin-bottom: 25px; border-bottom: 2px solid #333; display: inline-block; }
-        .pub-list { display: flex; flex-direction: column; gap: 20px; }
-        .pub-item { display: flex; gap: 20px; padding: 15px; border-radius: 8px; transition: background 0.3s; border-left: 4px solid transparent; }
-        .pub-item:hover { background: #f0f4ff; }
-        .award-highlight { border-left: 4px solid #ffcc00; background: #fffdf0; }
-        .pub-year { font-weight: 800; color: #2563eb; min-width: 60px; }
-        .pub-title a { text-decoration: none; color: #111; font-size: 1.1rem; font-weight: bold; }
-        .pub-title a:hover { color: #2563eb; }
-        .pub-authors { font-size: 0.95rem; color: #444; margin: 5px 0; }
-        .pub-venue { font-size: 0.9rem; color: #666; font-style: italic; }
-        .pub-links { margin-top: 10px; display: flex; gap: 10px; align-items: center; }
-        .doi-link { padding: 3px 12px; border: 1px solid #2563eb; color: #2563eb; text-decoration: none; border-radius: 4px; font-size: 0.75rem; font-weight: bold; }
-        .doi-link:hover { background: #2563eb; color: white; }
-        .award-tag { background: #ffcc00; color: #443300; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: bold; }
-
-        /* Video Gallery 스타일 */
-        .video-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-        .video-card { background: #fff; border-radius: 12px; overflow: hidden; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s; }
-        .video-card:hover { transform: translateY(-5px); }
-        .thumbnail { width: 100%; height: 150px; background: #2563eb; display: flex; justify-content: center; align-items: center; color: white; font-weight: bold; text-align: center; padding: 10px; }
-        .card-info { padding: 15px; }
-
-        /* Modal */
-        .modal { display: none; position: fixed; z-index: 2000; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); justify-content: center; align-items: center; }
-        #modalVideo { width: 80%; max-width: 1000px; border-radius: 10px; }
-        .close-btn { position: absolute; top: 30px; right: 50px; color: white; font-size: 50px; cursor: pointer; }
-    </style>
+    <title>Minju Baeck | KAIST UVR Lab</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-
-    <nav>
-        <a onclick="moveSlide(0)">About</a>
-        <a onclick="moveSlide(1)">Research</a>
-        <a onclick="moveSlide(2)">Demos</a>
-        <a onclick="moveSlide(3)">Contact</a>
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="#" class="nav-logo">Minju Baeck</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#experience">Experience</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <div class="main-container" id="master">
-        <section id="about">
-            <h2 class="section-bg-title">Part 01</h2>
-            <div class="content">
+    <main class="container">
+        <!-- About Section -->
+        <section id="about" class="about-section">
+                        <div class="about-text">
                 <h1>Minju Baeck</h1>
-                <p style="font-size: 1.2rem; color: #666; margin-top: 10px;">Researcher @ KAIST</p>
-                <p style="margin-top: 20px; line-height: 1.8;">
-                    Focusing on <strong>AR/VR/MR Interaction Design</strong>, Multimodal Feedback, and AI-driven content generation.
-                    Currently exploring visuo-tactile feedback and audio scene graphs to empower non-expert users in XR environments.
+                <h2 class="subtitle" style="margin-bottom: 25px; color: #333; font-weight: 600; font-size: 1.25rem;">Ph.D. Candidate, KAIST</h2>
+                
+                <p style="font-size: 1.1rem; color: #111; margin-bottom: 15px;">
+                    <strong>I explore how to make inaccessible sensory information perceivable and actionable.</strong>
                 </p>
+                <p style="margin-bottom: 25px; line-height: 1.6; color: #444; font-size: 1rem;">
+                    My research focuses on <strong>cross-modal interaction, multisensory XR, and human&ndash;AI interfaces</strong>, designing new ways for people to perceive, understand, and interact with digital information.
+                </p>
+                
+                <p style="font-size: 0.95rem; color: #666; margin-bottom: 30px;">
+                    <em>Ubiquitous Virtual Reality Lab &middot; Advised by Prof. Woontack Woo &amp; Prof. Sang-Ho Yoon</em>
+                </p>
+            </div>
+            <div class="about-image">
+                <img src="Source/minju2.jpeg" alt="Minju Baeck" class="profile-photo">
+
+                
+                <div class="social-links">
+
+                    <a href="mailto:minjubaeck@kaist.ac.kr" target="_blank"><i class="fas fa-envelope" style="font-size:1.1rem;"></i></a>
+                    <a href="https://www.linkedin.com/in/minjubaeck/" target="_blank"><i class="fab fa-linkedin" style="font-size:1.1rem;"></i></a>
+                    <a href="https://scholar.google.com/citations?hl=ko&user=PQtous4AAAAJ" target="_blank"><i class="fas fa-graduation-cap" style="font-size:1.1rem;"></i></a>
+                    <a href="https://github.com/gong000/minjubaeck" target="_blank"><i class="fab fa-github" style="font-size:1.1rem;"></i></a>
+                    <a href="MinjuCV_26.pdf" target="_blank" class="cv-link"><i class="fas fa-file-pdf"></i> CV</a>
+                </div>
+            </div>
+        </section>
+        <!-- Interactive About Pages -->
+        <section id="interactive-pages">
+            <div class="timeline-container">
+                <!-- Left: Controls -->
+                <div class="timeline-nav slider-mode">
+                    <div class="slider-track">
+                        <div class="slider-fill" id="slider-fill"></div>
+                        <div class="slider-thumb" id="slider-thumb">
+                            <div class="thumb-inner"></div>
+                        </div>
+                    </div>
+                    <div class="nav-item active" data-target="page-education" data-index="0">
+                        <span class="nav-text">Education</span>
+                    </div>
+                    <div class="nav-item" data-target="page-experience" data-index="1">
+                        <span class="nav-text">Experience</span>
+                    </div>
+                    <div class="nav-item" data-target="page-leadership" data-index="2">
+                        <span class="nav-text">Leadership & Community</span>
+                    </div>
+                </div>
+                
+                <!-- Right: Content Pages -->
+                <div class="timeline-content">
+                    <div class="tl-panel active" id="page-education">
+                        <!-- Education Section -->
+                <div id="education-inner">
+            <h2><i class="fas fa-university"></i> Education</h2>
+            
+            <div class="item tl-layout">
+                <div class="item-date">24.03 &ndash; Present</div>
+                <div class="item-content">
+                    <div class="item-header">
+                        <h3>KAIST</h3>
+                    </div>
+                    <p>Ph.D. Candidate, Graduate School of Culture Technology<br>
+                       <span class="detail">UVR Lab &middot; Advisors: Prof. Woontack Woo & Prof. Sang-Ho Yoon</span></p>
+                </div>
+            </div>
+
+            <div class="item tl-layout">
+                <div class="item-date">22.03 &ndash; 24.02</div>
+                <div class="item-content">
+                    <div class="item-header">
+                        <h3>KAIST</h3>
+                    </div>
+                    <p>M.S., Graduate School of Culture Technology<br>
+                       <span class="detail">UVR Lab &middot; Advisor: Prof. Woontack Woo</span></p>
+                </div>
+            </div>
+
+            <div class="item tl-layout">
+                <div class="item-date">15.03 &ndash; 20.02</div>
+                <div class="item-content">
+                    <div class="item-header">
+                        <h3>Chungnam National University</h3>
+                    </div>
+                    <p>B.S. Physics &middot; B.F.A. Creative Design</p>
+                </div>
+            </div>
+        </div>
+</div>
+                    <div class="tl-panel" id="page-experience">
+                        <!-- Experience Section -->
+                <div id="experience-inner">
+            <h2><i class="fas fa-briefcase"></i> Experience</h2>
+            
+            <div class="item tl-layout">
+                <div class="item-date">26.06 &ndash; 26.08</div>
+                <div class="item-content">
+                    <div class="item-header">
+                        <h3>3D Interaction Group (Virginia Tech), Visiting Researcher</h3>
+                    </div>
+                    <p>Supervisor: Prof. Doug Bowman</p>
+                </div>
+            </div>
+            
+            <div class="item tl-layout">
+                <div class="item-date">21.08 &ndash; 21.12</div>
+                <div class="item-content">
+                    <div class="item-header">
+                        <h3>Expressive Computing Lab (UNIST), Intern</h3>
+                    </div>
+                    <p>Supervisor: Prof. Kyungho Lee</p>
+                    <ul>
+                        <li>Designed <strong>elderly-centered interaction scenarios</strong> through focus group interviews.</li>
+                        <li>Prototyped <strong>AI-powered social robots</strong> using IBM Design Thinking.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="item tl-layout">
+                <div class="item-date">21.03 &ndash; 21.08</div>
+                <div class="item-content">
+                    <div class="item-header">
+                        <h3>Human-Centered Intelligence Systems Lab (GIST), Intern</h3>
+                    </div>
+                    <p>Supervisor: Prof. SeungJun Kim</p>
+                    <ul>
+                        <li>Analyzed <strong>biometric and gaze data</strong> for autonomous shuttle interfaces.</li>
+                        <li>Developed <strong>VR exhibition content</strong>, showcased at the Gwangju Biennale.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item tl-layout">
+                <div class="item-date">18.01 &ndash; 18.02</div>
+                <div class="item-content">
+                    <div class="item-header">
+                        <h3>Electronics and Telecommunications Research Institute (ETRI), Intern</h3>
+                    </div>
+                    <ul>
+                        <li>Measured <strong>Laser Diode</strong> and <strong>RF Equipment</strong>, and conducted <strong>Data Visualization</strong>.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+                    </div>
+                    <div class="tl-panel" id="page-leadership">
+                        <!-- Leadership Section -->
+                        <div id="leadership-inner">
+            <h2><i class="fas fa-users"></i> Leadership & Community</h2>
+            
+            <div class="item tl-layout">
+                <div class="item-date">24.01 &ndash; 26.12</div>
+                <div class="item-content">
+                    <div class="item-header"><h3>Global Shapers</h3></div>
+                    <p>Vice Curator (2025&ndash;26)</p>
+                </div>
+            </div>
+
+            <div class="item tl-layout">
+                <div class="item-date">24.01 &ndash; Present</div>
+                <div class="item-content">
+                    <div class="item-header"><h3>GDG Daejeon/KAIST</h3></div>
+                    <p>Member</p>
+                </div>
+            </div>
+
+            <div class="item tl-layout">
+                <div class="item-date">22.07 &ndash; 22.12</div>
+                <div class="item-content">
+                    <div class="item-header"><h3>KAIST CT Student Association</h3></div>
+                    <p>President</p>
+                </div>
+            </div>
+
+            <div class="item tl-layout">
+                <div class="item-date">19.07 &ndash; 20.02</div>
+                <div class="item-content">
+                    <div class="item-header"><h3>LG Global Challenger</h3></div>
+                    <p>Deputy Chief of Staff</p>
+                </div>
+            </div>
+
+            <div class="item tl-layout">
+                <div class="item-date">17.01 &ndash; 17.12</div>
+                <div class="item-content">
+                    <div class="item-header"><h3>Physics Student Association</h3></div>
+                    <p>President</p>
+                </div>
+            </div>
+
+            <div class="item tl-layout">
+                <div class="item-date">16.03 &ndash; 16.12</div>
+                <div class="item-content">
+                    <div class="item-header"><h3>Midam Education Volunteer Association</h3></div>
+                    <p>President</p>
+                </div>
+            </div>
+
+            <div class="item tl-layout">
+                <div class="item-date">16.01 &ndash; 16.12</div>
+                <div class="item-content">
+                    <div class="item-header"><h3>College of Natural Sciences Student Council</h3></div>
+                    <p>Member</p>
+                </div>
+            </div>
+        </div>
+
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="research">
-            <h2 class="section-bg-title">Part 02</h2>
-            <div class="content publication-container">
-                <h3 class="section-title">Selected Publications</h3>
-                <div class="pub-list">
-                    <div class="pub-item award-highlight">
-                        <span class="pub-year">2025</span>
-                        <div class="pub-detail">
-                            <h4 class="pub-title"><a href="https://doi.org/10.1109/TVCG.2025.3616805" target="_blank">Visuo-Tactile Feedback with Hand Outline Styles for Modulating Affective Roughness Perception</a></h4>
-                            <p class="pub-authors"><strong>M Baeck</strong>, Y Shin, D Kim, H Lee, SH Yoon, W Woo</p>
-                            <p class="pub-venue">IEEE TVCG (ISMAR '25)</p>
-                            <div class="pub-links">
-                                <span class="award-tag">🏆 Best Paper Awards</span>
-                                <a href="https://doi.org/10.1109/TVCG.2025.3616805" target="_blank" class="doi-link">DOI</a>
-                            </div>
-                        </div>
+
+
+        <!-- Interactive Timeline Section -->
+        
+        
+
+
+        <!-- Selected Works Section -->
+        <section id="selected-works">
+            <div class="section-title-row">
+                <h2 class="no-border"><i class="fas fa-star"></i> Selected Works</h2>
+            </div>
+            
+            <div class="works-grid">
+                <!-- Work 1 -->
+                <a href="javascript:void(0)" class="work-card">
+                    <div class="work-img">
+                        <img src="Source/visuo2.gif" alt="Making Touch Visible">
                     </div>
-                    <div class="pub-item">
-                        <span class="pub-year">2025</span>
-                        <div class="pub-detail">
-                            <h4 class="pub-title"><a href="https://doi.org/10.1145/3761667.3761960" target="_blank">Collaborative Scene Mood Authoring with Voice-driven Multimodal Feedback Design in Virtual Reality</a></h4>
-                            <p class="pub-authors">J Hong, <strong>M Baeck</strong>, S Kim, Y Shin, W Woo</p>
-                            <p class="pub-venue">SIGGRAPH Asia 2025 XR</p>
-                            <div class="pub-links"><a href="https://doi.org/10.1145/3761667.3761960" target="_blank" class="doi-link">DOI</a></div>
-                        </div>
+                    <div class="work-info">
+                        <h3>Making Touch Visible</h3>
+                        <p class="work-question">How can visual feedback reshape tactile perception?</p>
+                        <p class="work-tags">TVCG / ISMAR &middot; Multisensory</p>
                     </div>
-                    <div class="pub-item">
-                        <span class="pub-year">2024</span>
-                        <div class="pub-detail">
-                            <h4 class="pub-title"><a href="https://doi.org/10.1145/3652920.3652932" target="_blank">
-                                GestureMark: Smartwatch Touch Gestures for XR Glasses</a></h4>
-                            <p class="pub-authors">J Lee, <strong>M Baeck</strong>, HS Yeo, T Starner, W Woo</p>
-                            <p class="pub-venue">AH 2024</p>
-                            <div class="pub-links"><a href="https://doi.org/10.1145/3652920.3652932" target="_blank" class="doi-link">DOI</a></div>
-                        </div>
+                </a>
+
+                <!-- Work 2 -->
+                <a href="javascript:void(0)" class="work-card">
+                    <div class="work-img">
+                        <img src="Source/ISMAR26_sm33.gif" alt="Sharing What We Feel">
                     </div>
-                </div>
-                 <div class="pub-item">
-                        <span class="pub-year">2024</span>
-                        <div class="pub-detail">
-                            <h4 class="pub-title"><a href="https://doi.org/10.1109/ISMAR62088.2024.00046" target="_blank">
-                                Whirling Interface: Hand-based Motion Matching Selection for Small Target on XR Displays</a></h4>
-                            <p class="pub-authors">J Lee, SY Oh, <strong>M Baeck</strong>, HS Yeo, HI Kim, T Starner, W Woo</p>
-                            <p class="pub-venue">ISMAR 2024</p>
-                            <div class="pub-links"><a href="https://doi.org/10.1109/ISMAR62088.2024.00046" target="_blank" class="doi-link">DOI</a></div>
-                        </div>
+                    <div class="work-info">
+                        <h3>Sharing What We Feel</h3>
+                        <p class="work-question">How can private tactile information become shared?</p>
+                        <p class="work-tags">TVCG / ISMAR &middot; Collaboration &middot; XR</p>
+                    </div>
+                </a>
+
+                <!-- Work 3 -->
+                <a href="javascript:void(0)" class="work-card">
+                    <div class="work-img">
+                        <img src="Source/asiademog.gif" alt="AI-Assisted Multisensory Authoring">
+                    </div>
+                    <div class="work-info">
+                        <h3>AI-Assisted Multisensory Authoring</h3>
+                        <p class="work-question">How can AI support the creation of multisensory experiences?</p>
+                        <p class="work-tags">SIGGRAPH Asia &middot; Demo &middot; Generative AI</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+        <!-- Publications Section -->
+        <section id="publications">
+            <div class="section-title-row">
+                <h2 class="no-border"><i class="fas fa-book"></i> Publications</h2>
+                <a href="https://scholar.google.com/citations?hl=ko&user=PQtous4AAAAJ" class="more-link scholar-link" target="_blank">View all publications on Google Scholar &rarr;</a>
+            </div>
+            
+            <div class="pub-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="journal">Journal</button>
+                <button class="filter-btn" data-filter="conference">Conference</button>
+                <button class="filter-btn" data-filter="poster">Poster/Demo</button>
+            </div>
+
+            <div class="pub-list">
+                
+                <!-- Journal 1 -->
+                <div class="item publication" data-category="journal">
+                    <div class="pub-media" style="position: relative;">
+                        <video src="Source/ISMAR26_sharing.mp4" autoplay loop muted playsinline style="width: 100%; aspect-ratio: 16/9; border-radius: 10px; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.1);"></video>
+                    </div>
+                    <div class="pub-content">
+                        <div class="pub-year">2026 <span class="pub-badge badge-journal">Journal</span></div>
+                        <p class="pub-title"><a href="https://arxiv.org/abs/2608.29040" target="_blank" class="pub-link">Sharing Roughness with Hand-Outline Visualization to Reduce Sensory Asymmetry in VR Collaboration</a></p>
+                        <p class="pub-authors"><strong>Minju Baeck</strong>, Yoonseok Shin, Hyunjin Lee, Boram Yoon, Sang Ho Yoon, and Woontack Woo</p>
+                        <p class="pub-venue">IEEE Transactions on Visualization and Computer Graphics (TVCG). (IEEE ISMAR 2026)</p>
                     </div>
                 </div>
 
-                <h3 class="section-title" style="margin-top: 40px;">Honors & Awards</h3>
-                <ul style="list-style: none; line-height: 2;">
-                    <li>• <strong>Best Paper Nomination</strong>, ISMAR 2025</li>
-                    <li>• <strong>KAIST Research Scholarship</strong>, 2023 - Present</li>
+                <!-- Journal 2 -->
+                <div class="item publication" data-category="journal">
+                    <div class="pub-media" style="position: relative;">
+                        <img src="Source/organization.png" alt="Understanding Organizational Strategies" style="width: 100%; aspect-ratio: 16/9; border-radius: 10px; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                    </div>
+                    <div class="pub-content">
+                        <div class="pub-year">2026 <span class="pub-badge badge-journal">Journal</span></div>
+                        <p class="pub-title"><a href="https://arxiv.org/abs/2608.03132" target="_blank" class="pub-link">Understanding Organizational Strategies Across Multimodal Artifacts in Immersive Computational Notebooks</a></p>
+                        <p class="pub-authors">Sungwon In, <strong>Minju Baeck</strong>, Yalong Yang, Sang Ho Yoon, Woontack Woo, and Mallesham Dasari</p>
+                        <p class="pub-venue">IEEE Transactions on Visualization and Computer Graphics (TVCG). (IEEE ISMAR 2026)</p>
+                    </div>
+                </div>
+
+                <!-- Journal 3 -->
+                <div class="item publication" data-category="journal">
+                    <div class="pub-media" style="position: relative;">
+                        <video src="Source/event.mp4" autoplay loop muted playsinline style="width: 100%; aspect-ratio: 16/9; border-radius: 10px; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.1);"></video>
+                    </div>
+                    <div class="pub-content">
+                        <div class="pub-year">2026 <span class="pub-badge badge-journal">Journal</span></div>
+                        <p class="pub-title"><a href="https://doi.org/10.1109/TVCG.2026.3680704" target="_blank" class="pub-link">Event-Based Referred Vibrotactile Feedback for Bare-Hand XR Interaction</a></p>
+                        <p class="pub-authors">Juyoung Lee, Hyunseo Seo, Hyunjin Lee, <strong>Minju Baeck</strong>, Hui-Shyong Yeo, and Woontack Woo</p>
+                        <p class="pub-venue">IEEE Transactions on Visualization and Computer Graphics (TVCG). (IEEE VR 2026)</p>
+                    </div>
+                </div>
+
+                <!-- Journal 4 -->
+                <div class="item publication" data-category="journal">
+                    <div class="pub-media" style="position: relative;">
+                        <video src="Source/visuo.mp4" autoplay loop muted playsinline style="width: 100%; aspect-ratio: 16/9; border-radius: 10px; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.1);"></video>
+                    </div>
+                    <div class="pub-content">
+                        <div class="pub-year">2025 <span class="pub-badge badge-journal">Journal</span></div>
+                        <p class="pub-title"><a href="https://doi.org/10.1109/TVCG.2025.3616805" target="_blank" class="pub-link">Visuo-Tactile Feedback with Hand Outline Styles for Modulating Affective Roughness Perception 🏆 <em>(Best Paper Award Top 1%)</em></a></p>
+                        <p class="pub-authors"><strong>Minju Baeck</strong>, Yoonseok Shin, Dooyoung Kim, Hyunjin Lee, Sang Ho Yoon, Woontack Woo</p>
+                        <p class="pub-venue">IEEE Transactions on Visualization and Computer Graphics (TVCG). (IEEE ISMAR 2025)</p>
+                    </div>
+                </div>
+
+                <!-- Conference 1 -->
+                <div class="item publication" data-category="conference">
+                    <div class="pub-media" style="position: relative;">
+                        <video src="Source/whilring.mp4" autoplay loop muted playsinline style="width: 100%; aspect-ratio: 16/9; border-radius: 10px; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.1);"></video>
+                    </div>
+                    <div class="pub-content">
+                        <div class="pub-year">2024 <span class="pub-badge badge-conference">Conference</span></div>
+                        <p class="pub-title"><a href="https://doi.org/10.1109/ISMAR62088.2024.00046" target="_blank" class="pub-link">Whirling Interface: Hand-based Motion Matching Selection for Small Targets on XR Displays</a></p>
+                        <p class="pub-authors">Juyoung Lee, Seo Young Oh, <strong>Minju Baeck</strong>, Hui-Shyong Yeo, Hyung-Il Kim, Thad Starner, Woontack Woo</p>
+                        <p class="pub-venue">IEEE International Symposium on Mixed and Augmented Reality (ISMAR 2024)</p>
+                    </div>
+                </div>
+
+                <!-- Conference 2 -->
+                <div class="item publication" data-category="conference">
+                    <div class="pub-media" style="position: relative;">
+                        <video src="Source/gesture.mp4" autoplay loop muted playsinline style="width: 100%; aspect-ratio: 16/9; border-radius: 10px; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.1);"></video>
+                    </div>
+                    <div class="pub-content">
+                        <div class="pub-year">2024 <span class="pub-badge badge-conference">Conference</span></div>
+                        <p class="pub-title"><a href="https://doi.org/10.1145/3652920.3652941" target="_blank" class="pub-link">GestureMark: Shortcut Input Technique using Smartwatch Touch Gestures for XR Glasses</a></p>
+                        <p class="pub-authors">Juyoung Lee, <strong>Minju Baeck</strong>, Hui-Shyong Yeo, Thad Starner, Woontack Woo</p>
+                        <p class="pub-venue">Augmented Humans International Conference (AHs 2024)</p>
+                    </div>
+                </div>
+
+                <!-- Poster 1 -->
+                <div class="item publication" data-category="poster">
+                    <div class="pub-media" style="position: relative;">
+                        <video src="Source/asiademo.mp4" autoplay loop muted playsinline style="width: 100%; aspect-ratio: 16/9; border-radius: 10px; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.1);"></video>
+                    </div>
+                    <div class="pub-content">
+                        <div class="pub-year">2025 <span class="pub-badge badge-poster">Poster/Demo</span></div>
+                        <p class="pub-title"><a href="https://doi.org/10.1145/3761667.3761960" target="_blank" class="pub-link">Collaborative Scene Mood Authoring with Voice-driven Multimodal Feedback Design in Virtual Reality</a></p>
+                        <p class="pub-authors">Jinhyeok Hong*, <strong>Minju Baeck*</strong>, Seungwon Kim*, Yoon Shin*, Woontack Woo</p>
+                        <p class="pub-venue">Demo, SIGGRAPH Asia 2025 XR</p>
+                    </div>
+                </div>
+
+                <!-- Poster 2 -->
+                <div class="item publication" data-category="poster">
+                    <div class="pub-media" style="position: relative;">
+                        <img src="Source/region.png" alt="Region-Guided Interactive Docent" style="width: 100%; aspect-ratio: 16/9; border-radius: 10px; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                    </div>
+                    <div class="pub-content">
+                        <div class="pub-year">2025 <span class="pub-badge badge-poster">Poster/Demo</span></div>
+                        <p class="pub-title"><a href="https://doi.org/10.1109/ISMAR-Adjunct68609.2025.00223" target="_blank" class="pub-link">Region-Guided Interactive Docent for Paintings in Mixed Reality</a></p>
+                        <p class="pub-authors">Yoonseok Shin, <strong>Minju Baeck</strong>, Woontack Woo</p>
+                        <p class="pub-venue">IEEE ISMAR-Adjunct 2025</p>
+                    </div>
+                </div>
+
+                <!-- Poster 3 -->
+                <div class="item publication" data-category="poster">
+                    <div class="pub-media" style="position: relative;">
+                        <img src="Source/arch.png" alt="Architectural Elements Augmentation" style="width: 100%; aspect-ratio: 16/9; border-radius: 10px; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                    </div>
+                    <div class="pub-content">
+                        <div class="pub-year">2025 <span class="pub-badge badge-poster">Poster/Demo</span></div>
+                        <p class="pub-title"><a href="https://doi.org/10.1109/ISMAR-Adjunct68609.2025.00227" target="_blank" class="pub-link">Architectural Elements Augmentation from 2D Artworks for Spatial Experience of AR Exhibition</a></p>
+                        <p class="pub-authors">Young Bin Kim, Suji Kang, <strong>Minju Baeck</strong>, Seonji Kim, Woontack Woo</p>
+                        <p class="pub-venue">IEEE ISMAR-Adjunct 2025</p>
+                    </div>
+                </div>
+
+                <!-- Poster 4 -->
+                <div class="item publication" data-category="poster">
+                    <div class="pub-media" style="position: relative;">
+                        <video src="Source/memome.mp4" autoplay loop muted playsinline style="width: 100%; aspect-ratio: 16/9; border-radius: 10px; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.1);"></video>
+                    </div>
+                    <div class="pub-content">
+                        <div class="pub-year">2023 <span class="pub-badge badge-poster">Poster/Demo</span></div>
+                        <p class="pub-title"><a href="https://doi.org/10.1109/VRW58643.2023.00126" target="_blank" class="pub-link">Memo:me, an AR Sticky Note With Priority-Based Color Transition and On-Time Reminder</a></p>
+                        <p class="pub-authors">Eunhwa Song*, <strong>Minju Baeck*</strong>, Jihyeon Lee*, Seo Young Oh, Dooyoung Kim, Woontack Woo, Jeongmi Lee, Sang Ho Yoon</p>
+                        <p class="pub-venue">IEEE VR Abstracts and Workshops (VRW 2023)</p>
+                    </div>
+                </div>
+
+            </div>
+            
+
+        </section>
+
+        
+
+        <!-- Awards Section -->
+        <section id="awards">
+            <div class="section-title-row" style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 20px;">
+                <h2 id="awards-title" class="no-border" style="margin-bottom: 0; padding-bottom: 0; border: none;"><i class="fas fa-trophy"></i> Selected Honors & Awards</h2>
+                <button id="toggle-awards-btn" class="more-link" style="background:none; border:none; cursor:pointer; font-family:inherit; font-size:0.9rem; font-weight:600; padding:0; color: #666;">View all awards &darr;</button>
+            </div>
+
+            <div class="award-category-clean">
+                <div class="cat-label">Research Recognition</div>
+                <ul class="awards-list">
+                    <li>
+                        <span class="award-title"><strong>Best Paper Award (Top 1%)</strong></span>
+                        <span class="award-event">IEEE ISMAR</span>
+                        <span class="date">2025</span>
+                    </li>
+                    <li class="hidden-award">
+                        <span class="award-title"><strong>1st Prize</strong></span>
+                        <span class="award-event">National University Student DIY SEM Competition</span>
+                        <span class="date">2018</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="award-category-clean">
+                <div class="cat-label">Product & Technology</div>
+                <ul class="awards-list">
+                    <li>
+                        <span class="award-title"><strong>2nd Prize</strong></span>
+                        <span class="award-event">SKYST Joint Hackathon</span>
+                        <span class="date">2025</span>
+                    </li>
+                    <li>
+                        <span class="award-title"><strong>1st Prize</strong></span>
+                        <span class="award-event">Metaverse Developer Contest</span>
+                        <span class="date">2023</span>
+                    </li>
+                    <li class="hidden-award">
+                        <span class="award-title"><strong>Excellence Award</strong></span>
+                        <span class="award-event">KAIST SW Competition</span>
+                        <span class="date">2021</span>
+                    </li>
+                    <li class="hidden-award">
+                        <span class="award-title"><strong>1st Prize</strong></span>
+                        <span class="award-event">COLLATHON</span>
+                        <span class="date">2018</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="award-category-clean hidden-award">
+                <div class="cat-label">Design & Making</div>
+                <ul class="awards-list">
+                    <li>
+                        <span class="award-title"><strong>Participation Prize</strong></span>
+                        <span class="award-event">WTA Daejeon High-Tech Fair Idea Competition</span>
+                        <span class="date">2019</span>
+                    </li>
+                    <li>
+                        <span class="award-title"><strong>Best Convergent Team</strong></span>
+                        <span class="award-event">F1 Model Car Race</span>
+                        <span class="date">2018</span>
+                    </li>
+                    <li>
+                        <span class="award-title"><strong>1st Prize</strong></span>
+                        <span class="award-event">Make-A-Thon Start-up Camp</span>
+                        <span class="date">2018</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="award-category-clean hidden-award">
+                <div class="cat-label">Exploration</div>
+                <ul class="awards-list">
+                    <li>
+                        <span class="award-title"><strong>Finalist</strong></span>
+                        <span class="award-event">LG Global Challenger</span>
+                        <span class="date">2019</span>
+                    </li>
                 </ul>
             </div>
         </section>
 
-        <section id="skills">
-            <h2 class="section-bg-title">Part 03</h2>
-            <div class="content">
-                <h3 class="section-title">Research Demo Session</h3>
-                <div class="video-grid">
-                    <div class="video-card" onclick="openModal('stiffness_demo.mp4')">
-                        <div class="thumbnail">XR Stiffness Control</div>
-                        <div class="card-info"><h4>Virtual Stiffness</h4><p>Pseudo-haptics in XR</p></div>
+        
+        <!-- Fun Projects Section -->
+        <section id="fun-projects">
+            <h2><i class="fas fa-palette"></i> Fun Projects</h2>
+            <div class="gallery-grid">
+                <!-- Project 1 -->
+                <div class="gallery-card" data-title="Michelangelo's Glasses" data-desc="AR voxel-based 3D drawing app using Snapdragon Spaces (Unity/XR) for creating and sharing printable 3D artworks." data-img="Source/metadevelopeg.gif">
+                    <img src="Source/metadevelopeg.gif" alt="Michelangelo's Glasses">
+                    <div class="card-overlay">
+                        <h3>Michelangelo's Glasses</h3>
                     </div>
-                    <div class="video-card" onclick="openModal('audio_demo.mp4')">
-                        <div class="thumbnail">AI Audio Gen</div>
-                        <div class="card-info"><h4>AudioGen Interaction</h4><p>Real-time Sound Synthesis</p></div>
+                </div>
+                <!-- Project 2 -->
+                <div class="gallery-card" data-title="Smart Emotional Lighting" data-desc="Developed 'Smart Emotional Lighting' using Arduino during a 2-day intensive Make-A-Thon start-up camp." data-img="Source/metareadingggif.gif">
+                    <img src="Source/metareadingggif.gif" alt="Project 2">
+                    <div class="card-overlay">
+                        <h3>Smart Emotional Lighting</h3>
                     </div>
-                    <div class="video-card" onclick="openModal('graph_demo.mp4')">
-                        <div class="thumbnail">Scene Graph</div>
-                        <div class="card-info"><h4>Audio Scene Graph</h4><p>Context Analysis</p></div>
+                </div>
+                <!-- Project 3 -->
+                <div class="gallery-card" data-title="F1 Model Car Race" data-desc="Designed an F1 car 3D model and delivered a project presentation as the Best Convergent Team." data-img="https://via.placeholder.com/600x400?text=F1+Car+3D+Model">
+                    <img src="https://via.placeholder.com/400x300?text=F1+Car+3D+Model" alt="Project 3">
+                    <div class="card-overlay">
+                        <h3>F1 Model Car Race</h3>
+                    </div>
+                </div>
+                <!-- Project 4 -->
+                <div class="gallery-card" data-title="AI Audio Recommendation" data-desc="Developed an AI-based audio recommendation app service using ML algorithms at SKYST Joint Hackathon." data-img="https://via.placeholder.com/600x400?text=AI+Audio">
+                    <img src="https://via.placeholder.com/400x300?text=AI+Audio" alt="Project 4">
+                    <div class="card-overlay">
+                        <h3>AI Audio App</h3>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact">
-            <h2 class="section-bg-title">Thanks</h2>
-            <div class="content" style="text-align: center;">
-                <h1>Keep Exploring</h1>
-                <p style="margin-top: 20px;">📧 minjubaeck@kaist.ac.kr</p>
+        <!-- Project Modal -->
+                <!-- Research Vision Modal -->
+        <div id="vision-modal" class="modal">
+            <div class="modal-content vision-modal-content">
+                <span class="close-vision-btn">&times;</span>
+                <div class="vision-modal-layout">
+                    <!-- Left: Media -->
+                    <div class="vision-modal-media">
+                        <div class="vision-img-placeholder" id="vision-modal-img">Thumbnail / GIF</div>
+                    </div>
+                    <!-- Right: Scrollable Info -->
+                    <div class="vision-modal-info">
+                        <h2 id="vision-title">Making Touch Visible</h2>
+                        <h4 id="vision-question" class="vision-question">How can visual feedback reshape tactile perception?</h4>
+                        <div id="vision-tags" class="work-tags">
+                            <span class="work-tag">TVCG / ISMAR</span>
+                            <span class="work-tag">MULTISENSORY</span>
+                        </div>
+                        
+                        <div class="vision-sections">
+                            <div class="v-section">
+                                <h5><i class="fas fa-exclamation-circle"></i> Problem</h5>
+                                <p>There is a lack of shared understanding in private tactile experiences...</p>
+                            </div>
+                            <div class="v-section">
+                                <h5><i class="fas fa-lightbulb"></i> Idea</h5>
+                                <p>Using visual augmentations to represent tactile sensations...</p>
+                            </div>
+                            <div class="v-section">
+                                <h5><i class="fas fa-cogs"></i> System</h5>
+                                <p>Developed a VR framework utilizing hand-outline visualizations...</p>
+                            </div>
+                            <div class="v-section">
+                                <h5><i class="fas fa-users"></i> Study</h5>
+                                <p>Within-subjects user study with 24 participants comparing feedback types...</p>
+                            </div>
+                            <div class="v-section">
+                                <h5><i class="fas fa-chart-line"></i> Findings</h5>
+                                <p>Significantly reduced sensory asymmetry and improved collaboration speed...</p>
+                            </div>
+                            <div class="v-section">
+                                <h5><i class="fas fa-user-tag"></i> My Role</h5>
+                                <p>System Design, Implementation, User Study Design</p>
+                            </div>
+                            <div class="v-section links-section">
+                                <a href="#" class="v-link"><i class="fas fa-file-pdf"></i> Paper</a>
+                                <a href="#" class="v-link"><i class="fas fa-video"></i> Video</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </section>
-    </div>
+        </div>
 
-    <div id="videoModal" class="modal" onclick="closeModal()">
-        <span class="close-btn">&times;</span>
-        <video id="modalVideo" controls autoplay onclick="event.stopPropagation()">
-            <source src="" type="video/mp4">
-        </video>
-    </div>
+        <div id="project-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <img id="modal-img" src="" alt="Project Image">
+                <h3 id="modal-title">Project Title</h3>
+                <p id="modal-desc">Project Description</p>
+            </div>
+            </div>
+</div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Minju Baeck. All rights reserved.</p>
+    </footer>
+    <script>
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                const filter = btn.getAttribute('data-filter');
+                document.querySelectorAll('.publication').forEach(pub => {
+                    if(filter === 'all' || pub.getAttribute('data-category') === filter) {
+                        pub.style.display = 'flex';
+                    } else {
+                        pub.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Fun Projects Modal Logic
+        const modal = document.getElementById('project-modal');
+        const closeBtn = document.querySelector('.close-btn');
+        const modalImg = document.getElementById('modal-img');
+        const modalTitle = document.getElementById('modal-title');
+        const modalDesc = document.getElementById('modal-desc');
+
+        document.querySelectorAll('.gallery-card').forEach(card => {
+            card.addEventListener('click', () => {
+                modalImg.src = card.getAttribute('data-img');
+                modalTitle.textContent = card.getAttribute('data-title');
+                modalDesc.textContent = card.getAttribute('data-desc');
+                modal.classList.add('show');
+            });
+        });
+
+        if (closeBtn) {
+            closeBtn.addEventListener('click', () => modal.classList.remove('show'));
+        }
+        if (modal) {
+            modal.addEventListener('click', (e) => {
+                if(e.target === modal) modal.classList.remove('show');
+            });
+        }
+
+        // Helper for slider
+        function updateSlider(index) {
+            const percentage = (index / 2) * 100;
+            document.documentElement.style.setProperty('--slider-pos', percentage + '%');
+        }
+
+        // Timeline Tabs Logic
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.addEventListener('click', () => {
+                // Remove active class from all nav items
+                document.querySelectorAll('.nav-item').forEach(nav => nav.classList.remove('active'));
+                // Remove active class from all panels
+                document.querySelectorAll('.tl-panel').forEach(panel => panel.classList.remove('active'));
+                
+                // Add active class to clicked nav item
+                item.classList.add('active');
+                
+                // Update slider
+                const index = parseInt(item.getAttribute('data-index'));
+                if(!isNaN(index)) updateSlider(index);
+                
+                // Add active class to corresponding panel
+                const target = item.getAttribute('data-target');
+                document.getElementById(target).classList.add('active');
+            });
+        });
+
+        // Top Navigation Interactivity
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                const targetHref = link.getAttribute('href');
+                if (targetHref === '#education' || targetHref === '#experience' || targetHref === '#leadership') {
+                    e.preventDefault();
+                    
+                    // map to page target
+                    const targetPageId = 'page-' + targetHref.replace('#', '');
+                    
+                    // Remove active from all nav items and panels
+                    document.querySelectorAll('.nav-item').forEach(nav => nav.classList.remove('active'));
+                    document.querySelectorAll('.tl-panel').forEach(panel => panel.classList.remove('active'));
+                    
+                    // Activate corresponding nav item
+                    const navItem = document.querySelector(`.nav-item[data-target="${targetPageId}"]`);
+                    if (navItem) {
+                        navItem.classList.add('active');
+                        const index = parseInt(navItem.getAttribute('data-index'));
+                        if(!isNaN(index)) updateSlider(index);
+                    }
+                    
+                    // Activate corresponding panel
+                    const panel = document.getElementById(targetPageId);
+                    if (panel) panel.classList.add('active');
+
+                    // Scroll to the interactive pages container
+                    document.getElementById('interactive-pages').scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+
+    
+
 
     <script>
-        function moveSlide(index) {
-            document.getElementById('master').style.transform = `translateX(-${index * 100}vw)`;
+        document.getElementById('toggle-awards-btn').addEventListener('click', function() {
+            const awardsSection = document.getElementById('awards');
+            const isExpanded = awardsSection.classList.contains('expanded');
+            const title = document.getElementById('awards-title');
+            
+            if (!isExpanded) {
+                awardsSection.classList.add('expanded');
+                this.innerHTML = 'Show less &uarr;';
+                title.innerHTML = '<i class="fas fa-trophy"></i> Honors & Awards';
+            } else {
+                awardsSection.classList.remove('expanded');
+                this.innerHTML = 'View all awards &darr;';
+                title.innerHTML = '<i class="fas fa-trophy"></i> Selected Honors & Awards';
+            }
+        });
+    </script>
+
+    <script>
+        // Vision Modal Logic
+        const visionModal = document.getElementById('vision-modal');
+        const closeVisionBtn = document.querySelector('.close-vision-btn');
+        
+        document.querySelectorAll('.work-card').forEach(card => {
+            card.addEventListener('click', function(e) {
+                e.preventDefault();
+                const title = this.querySelector('h3').innerText;
+                const question = this.querySelector('.work-question').innerText;
+                const tags = this.querySelector('.work-tags').innerHTML;
+                
+                // Set text contents
+                document.getElementById('vision-title').innerText = title;
+                document.getElementById('vision-question').innerText = question;
+                document.getElementById('vision-tags').innerHTML = tags;
+                
+                // Get media from the clicked card
+                const imgElement = this.querySelector('.work-img img, .work-img video');
+                const modalMediaContainer = document.querySelector('.vision-modal-media');
+                
+                if (imgElement) {
+                    modalMediaContainer.innerHTML = '';
+                    const newMedia = imgElement.cloneNode(true);
+                    newMedia.style.width = '100%';
+                    newMedia.style.height = '100%';
+                    newMedia.style.objectFit = 'cover';
+                    newMedia.style.position = 'static'; // remove dome absolute positioning
+                    newMedia.style.transform = 'none';
+                    newMedia.style.borderRadius = '0';
+                    modalMediaContainer.appendChild(newMedia);
+                }
+                
+                visionModal.style.display = 'flex';
+                document.body.style.overflow = 'hidden'; 
+            });
+        });
+        
+        if (closeVisionBtn) {
+            closeVisionBtn.addEventListener('click', () => {
+                visionModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            });
         }
-        function openModal(src) {
-            const modal = document.getElementById('videoModal');
-            const video = document.getElementById('modalVideo');
-            video.src = src;
-            modal.style.display = 'flex';
-        }
-        function closeModal() {
-            const modal = document.getElementById('videoModal');
-            document.getElementById('modalVideo').pause();
-            modal.style.display = 'none';
-        }
+        
+        window.addEventListener('click', (e) => {
+            if (e.target === visionModal) {
+                visionModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
     </script>
 </body>
 </html>
