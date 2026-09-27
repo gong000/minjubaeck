@@ -486,24 +486,30 @@
         <section id="awards">
             <div class="section-title-row" style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 20px;">
                 <h2 id="awards-title" class="no-border" style="margin-bottom: 0; padding-bottom: 0; border: none;"><i class="fas fa-trophy"></i> Selected Honors & Awards</h2>
-                <button id="toggle-awards-btn" class="more-link" style="background:none; border:none; cursor:pointer; font-family:inherit; font-size:0.9rem; font-weight:600; padding:0; color: #666;">View 6 earlier awards &darr;</button>
+                <button id="toggle-awards-btn" class="more-link" style="background:none; border:none; cursor:pointer; font-family:inherit; font-size:0.9rem; font-weight:600; padding:0; color: #666;">View 8 earlier awards &darr;</button>
             </div>
 
             <ul class="awards-list">
                 <li>
+                    <span><strong>Best Paper Award</strong> &middot; Korea Computer Congress (KCC) &middot; 2026</span>
+                </li>
+                <li>
                     <span><strong>Best Paper Award (Top 1%)</strong> &middot; IEEE ISMAR &middot; 2025</span>
+                </li>
+                <li>
+                    <span><strong>Outstanding Paper Award</strong> &middot; Korea Computer Congress (KCC) &middot; 2025</span>
                 </li>
                 <li>
                     <span><strong>2nd Prize</strong> &middot; SKYST Joint Hackathon &middot; 2025</span>
                 </li>
-                <li>
-                    <span><strong>1st Prize</strong> &middot; Metaverse Developer Contest &middot; 2023</span>
-                </li>
-                <li>
-                    <span><strong>Excellence Award</strong> &middot; KAIST SW Competition &middot; 2021</span>
-                </li>
 
                 <!-- Hidden earlier awards -->
+                <li class="hidden-award">
+                    <span><strong>1st Prize</strong> &middot; Metaverse Developer Contest &middot; 2023</span>
+                </li>
+                <li class="hidden-award">
+                    <span><strong>Excellence Award</strong> &middot; KAIST SW Competition &middot; 2021</span>
+                </li>
                 <li class="hidden-award">
                     <span><strong>Participation Prize</strong> &middot; WTA Daejeon High-Tech Fair Idea Competition &middot; 2019</span>
                 </li>
@@ -749,7 +755,7 @@
                 title.innerHTML = '<i class="fas fa-trophy"></i> Honors & Awards';
             } else {
                 awardsSection.classList.remove('expanded');
-                this.innerHTML = 'View 6 earlier awards &darr;';
+                this.innerHTML = 'View 8 earlier awards &darr;';
                 title.innerHTML = '<i class="fas fa-trophy"></i> Selected Honors & Awards';
             }
         });
