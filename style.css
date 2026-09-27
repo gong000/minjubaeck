@@ -1202,3 +1202,11 @@ h2.no-border {
     width: auto !important;
     height: auto !important;
 }
+
+/* Override awards-list li for single line compact layout */
+.awards-list li {
+    display: block !important;
+    padding: 0.6rem 0 !important;
+    font-size: 0.95rem;
+    color: #444;
+}
