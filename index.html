@@ -69,12 +69,15 @@
                         <span class="nav-text">Education</span>
                     </div>
                     <div class="nav-item" data-target="page-experience" data-index="1">
-                        <span class="nav-text">Experience</span>
+                        <span class="nav-text">Research Experience</span>
                     </div>
-                    <div class="nav-item" data-target="page-leadership" data-index="2">
-                        <span class="nav-text">Leadership & Community</span>
+                    <div class="nav-item" data-target="page-teaching" data-index="2">
+                        <span class="nav-text">Teaching Experience</span>
                     </div>
-                    <div class="nav-item" data-target="page-skills" data-index="3">
+                    <div class="nav-item" data-target="page-leadership" data-index="3">
+                        <span class="nav-text">Leadership &amp; Community</span>
+                    </div>
+                    <div class="nav-item" data-target="page-skills" data-index="4">
                         <span class="nav-text">Skills</span>
                     </div>
                 </div>
@@ -122,7 +125,7 @@
                     <div class="tl-panel" id="page-experience">
                         <!-- Experience Section -->
                 <div id="experience-inner">
-            <h2><i class="fas fa-briefcase"></i> Experience</h2>
+            <h2><i class="fas fa-microscope"></i> Research Experience</h2>
             
             <div class="item tl-layout">
                 <div class="item-date">26.06 &ndash; 26.08</div>
@@ -177,6 +180,35 @@
 
                     </div>
                     <div class="tl-panel" id="page-leadership">
+                    <!-- Teaching Experience Section -->
+                    <div class="tl-panel" id="page-teaching">
+                        <h2><i class="fas fa-chalkboard-teacher"></i> Teaching Experience</h2>
+                        
+                        <div class="item tl-layout">
+                            <div class="item-date" style="color: #3498db; font-size: 1.05rem; font-weight: 700;">2026</div>
+                            <div class="item-content">
+                                <div class="item-header"><h3 style="font-weight: 600; font-size: 1.05rem; color: #111;">Teaching Assistant, 3D Interaction Design</h3></div>
+                                <div class="item-location" style="color: #666; font-size: 0.95rem;">KAIST</div>
+                            </div>
+                        </div>
+
+                        <div class="item tl-layout">
+                            <div class="item-date" style="color: #3498db; font-size: 1.05rem; font-weight: 700;">2025</div>
+                            <div class="item-content">
+                                <div class="item-header"><h3 style="font-weight: 600; font-size: 1.05rem; color: #111;">Teaching Assistant, Augmented Reality Project</h3></div>
+                                <div class="item-location" style="color: #666; font-size: 0.95rem;">KAIST</div>
+                            </div>
+                        </div>
+
+                        <div class="item tl-layout">
+                            <div class="item-date" style="color: #3498db; font-size: 1.05rem; font-weight: 700;">2025</div>
+                            <div class="item-content">
+                                <div class="item-header"><h3 style="font-weight: 600; font-size: 1.05rem; color: #111;">Museum Education Instructor, Children&rsquo;s Museum</h3></div>
+                                <div class="item-location" style="color: #666; font-size: 0.95rem;">National Museum of Korea</div>
+                            </div>
+                        </div>
+                    </div>
+
                         <!-- Leadership Section -->
                         <div id="leadership-inner">
             <h2><i class="fas fa-users"></i> Leadership & Community</h2>
@@ -682,7 +714,7 @@
 
         // Helper for slider
         function updateSlider(index) {
-            const percentage = (index / 3) * 100;
+            const percentage = (index / 4) * 100;
             document.documentElement.style.setProperty('--slider-pos', percentage + '%');
         }
 
