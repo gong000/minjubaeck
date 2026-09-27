@@ -1210,3 +1210,8 @@ h2.no-border {
     font-size: 0.95rem;
     color: #444;
 }
+
+/* Align Skills list columns */
+#skills-inner .item-date {
+    min-width: 200px;
+}
