@@ -1795,6 +1795,15 @@ h1, h2, .card-section-title, .about-text h1, .about-text h2 {
     border: 1px solid #FDE68A !important;
 }
 
+.pub-award-highlight {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #b45309;
+    margin: 4px 0 5px 0;
+    line-height: 1.4;
+    letter-spacing: 0.15px;
+}
+
 
 .stacked-desc {
     font-size: 14px;
