@@ -1792,7 +1792,10 @@ h1, h2, .card-section-title, .about-text h1, .about-text h2 {
     border: none !important;
     padding: 0 !important;
     color: #B45309 !important;
+    font-size: 1.05rem !important;
     font-weight: 700;
+    margin-left: 10px;
+    line-height: 1.3;
 }
 
 .pub-award-highlight {
