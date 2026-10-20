@@ -1854,3 +1854,36 @@ h1, h2, .card-section-title, .about-text h1, .about-text h2 {
     font-weight: 700;
     font-size: 0.85rem;
 }
+
+
+/* Category Badges for Other Awards */
+.award-cat-tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 1px 7px;
+    border-radius: 6px;
+    margin-left: 8px;
+    vertical-align: middle;
+    letter-spacing: 0.3px;
+}
+.cat-app {
+    background: #eff6ff;
+    color: #2563eb;
+    border: 1px solid #dbeafe;
+}
+.cat-xr {
+    background: #faf5ff;
+    color: #7c3aed;
+    border: 1px solid #f3e8ff;
+}
+.cat-hw {
+    background: #fff7ed;
+    color: #c2410c;
+    border: 1px solid #ffedd5;
+}
+.cat-inno {
+    background: #f0fdf4;
+    color: #15803d;
+    border: 1px solid #dcfce7;
+}
