@@ -1786,15 +1786,13 @@ h1, h2, .card-section-title, .about-text h1, .about-text h2 {
 
 
 /* Award Badges for Publications */
-.badge-award-best {
-    background-color: #FEF3C7 !important;
-    color: #B45309 !important;
-    border: 1px solid #FDE68A !important;
-}
+.badge-award-best,
 .badge-award-honorable {
-    background-color: #FEF3C7 !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
     color: #B45309 !important;
-    border: 1px solid #FDE68A !important;
+    font-weight: 700;
 }
 
 .pub-award-highlight {
