@@ -1838,3 +1838,19 @@ h1, h2, .card-section-title, .about-text h1, .about-text h2 {
 .compact-col-title {
     color: var(--vibrant-blue) !important;
 }
+
+
+/* Subgroup titles for Awards */
+.award-subgroup-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--vibrant-blue) !important;
+    margin: 0 0 12px 0;
+    padding-bottom: 6px;
+    border-bottom: 1.5px solid rgba(0, 0, 0, 0.08);
+}
+.award-date {
+    color: var(--vibrant-blue);
+    font-weight: 700;
+    font-size: 0.85rem;
+}

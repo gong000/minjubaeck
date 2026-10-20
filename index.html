@@ -204,7 +204,7 @@
                 <!-- Journal 1 -->
                 <div class="item publication" data-category="journal">
                     <div class="pub-media" style="position: relative;">
-                        <video src="Source/ISMAR26_sharing.mp4" autoplay loop muted playsinline style="width: 100%; aspect-ratio: 16/9; border-radius: 10px; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.1);"></video>
+                        <video src="Source/ISMAR26_sharing_loop.mp4" autoplay loop muted playsinline style="width: 100%; aspect-ratio: 16/9; border-radius: 10px; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.1);"></video>
                     </div>
                     <div class="pub-content">
                         <div class="pub-year">2026 <span class="pub-badge badge-journal">Journal</span> <span class="pub-badge badge-award-best">🏆 Best Paper Award</span></div>
@@ -282,7 +282,7 @@
                 <!-- Poster 1 -->
                 <div class="item publication" data-category="poster">
                     <div class="pub-media" style="position: relative;">
-                        <video src="Source/asiademo.mp4" autoplay loop muted playsinline style="width: 100%; aspect-ratio: 16/9; border-radius: 10px; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.1);"></video>
+                        <video src="Source/asiademo_loop.mp4" autoplay loop muted playsinline style="width: 100%; aspect-ratio: 16/9; border-radius: 10px; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.1);"></video>
                     </div>
                     <div class="pub-content">
                         <div class="pub-year">2025 <span class="pub-badge badge-poster">Poster/Demo</span></div>
@@ -321,7 +321,7 @@
                 <!-- Poster 4 -->
                 <div class="item publication" data-category="poster">
                     <div class="pub-media" style="position: relative;">
-                        <video src="Source/memome.mp4" autoplay loop muted playsinline style="width: 100%; aspect-ratio: 16/9; border-radius: 10px; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.1);"></video>
+                        <video src="Source/memome_loop.mp4" autoplay loop muted playsinline style="width: 100%; aspect-ratio: 16/9; border-radius: 10px; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.1);"></video>
                     </div>
                     <div class="pub-content">
                         <div class="pub-year">2023 <span class="pub-badge badge-poster">Poster/Demo</span></div>
@@ -341,56 +341,65 @@
         <!-- Awards Section -->
         <section id="awards">
             <div class="section-title-row" style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 20px;">
-                <h2 id="awards-title" class="no-border" style="margin-bottom: 0; padding-bottom: 0; border: none;">Selected Honors & Awards</h2>
-                <button id="toggle-awards-btn" class="more-link" style="background:none; border:none; cursor:pointer; font-family:inherit; font-size:0.9rem; font-weight:600; padding:0; color: #666;">View 8 earlier awards &darr;</button>
+                <h2 id="awards-title" class="no-border" style="margin-bottom: 0; padding-bottom: 0; border: none;">Honors &amp; Awards</h2>
+                <button id="toggle-other-awards-btn" class="more-link" style="background:none; border:none; cursor:pointer; font-family:inherit; font-size:0.9rem; font-weight:600; padding:0; color: #666;">View Other Awards (9) &darr;</button>
             </div>
 
-            <ul class="awards-list">
-                <li>
-                    <span>🏆 <strong>Best Paper Award</strong> &middot; IEEE ISMAR &middot; <span style="color: #2340E8; font-weight: 700;">2026</span></span>
-                </li>
-                <li>
-                    <span>🎖️ <strong>Best Paper Award Honorable Mention</strong> &middot; IEEE ISMAR &middot; <span style="color: #2340E8; font-weight: 700;">2026</span></span>
-                </li>
-                <li>
-                    <span>🏆 <strong>Best Paper Award</strong> &middot; Korea Computer Congress (KCC) &middot; <span style="color: #2340E8; font-weight: 700;">2026</span></span>
-                </li>
-                <li>
-                    <span>🏆 <strong>Best Paper Award (Top 1%)</strong> &middot; IEEE ISMAR &middot; <span style="color: #2340E8; font-weight: 700;">2025</span></span>
-                </li>
-                <li>
-                    <span><strong>Outstanding Paper Award</strong> &middot; Korea Computer Congress (KCC) &middot; <span style="color: #2340E8; font-weight: 700;">2025</span></span>
-                </li>
-                <li>
-                    <span><strong>2nd Prize</strong> &middot; SKYST Joint Hackathon &middot; <span style="color: #2340E8; font-weight: 700;">2025</span></span>
-                </li>
+            <!-- Research Awards (Always visible) -->
+            <div class="awards-group">
+                <h3 class="award-subgroup-title">Research Awards</h3>
+                <ul class="awards-list">
+                    <li>
+                        <span>🏆 <strong>Best Paper Award</strong> &middot; IEEE ISMAR &middot; <span class="award-date">2026</span></span>
+                    </li>
+                    <li>
+                        <span>🎖️ <strong>Best Paper Award Honorable Mention</strong> &middot; IEEE ISMAR &middot; <span class="award-date">2026</span></span>
+                    </li>
+                    <li>
+                        <span>🏆 <strong>Best Paper Award</strong> &middot; Korea Computer Congress (KCC) &middot; <span class="award-date">2026</span></span>
+                    </li>
+                    <li>
+                        <span>🏆 <strong>Best Paper Award (Top 1%)</strong> &middot; IEEE ISMAR &middot; <span class="award-date">2025</span></span>
+                    </li>
+                    <li>
+                        <span><strong>Outstanding Paper Award</strong> &middot; Korea Computer Congress (KCC) &middot; <span class="award-date">2025</span></span>
+                    </li>
+                </ul>
+            </div>
 
-                <!-- Hidden earlier awards -->
-                <li class="hidden-award">
-                    <span><strong>1st Prize</strong> &middot; Metaverse Developer Contest &middot; <span style="color: #2340E8; font-weight: 700;">2023</span></span>
-                </li>
-                <li class="hidden-award">
-                    <span><strong>Excellence Award</strong> &middot; KAIST SW Competition &middot; <span style="color: #2340E8; font-weight: 700;">2021</span></span>
-                </li>
-                <li class="hidden-award">
-                    <span><strong>Participation Prize</strong> &middot; WTA Daejeon High-Tech Fair Idea Competition &middot; <span style="color: #2340E8; font-weight: 700;">2019</span></span>
-                </li>
-                <li class="hidden-award">
-                    <span><strong>Finalist</strong> &middot; LG Global Challenger &middot; <span style="color: #2340E8; font-weight: 700;">2019</span></span>
-                </li>
-                <li class="hidden-award">
-                    <span><strong>1st Prize</strong> &middot; National University Student DIY SEM Competition &middot; <span style="color: #2340E8; font-weight: 700;">2018</span></span>
-                </li>
-                <li class="hidden-award">
-                    <span><strong>1st Prize</strong> &middot; COLLATHON &middot; <span style="color: #2340E8; font-weight: 700;">2018</span></span>
-                </li>
-                <li class="hidden-award">
-                    <span><strong>Best Convergent Team</strong> &middot; F1 Model Car Race &middot; <span style="color: #2340E8; font-weight: 700;">2018</span></span>
-                </li>
-                <li class="hidden-award">
-                    <span><strong>1st Prize</strong> &middot; Make-A-Thon Start-up Camp &middot; <span style="color: #2340E8; font-weight: 700;">2018</span></span>
-                </li>
-            </ul>
+            <!-- Other Awards (Hidden by default, shown on More) -->
+            <div id="other-awards-container" class="awards-group" style="display: none; margin-top: 24px;">
+                <h3 class="award-subgroup-title">Other Awards</h3>
+                <ul class="awards-list">
+                    <li>
+                        <span><strong>2nd Prize</strong> &middot; SKYST Joint Hackathon &middot; <span class="award-date">2025</span></span>
+                    </li>
+                    <li>
+                        <span><strong>1st Prize</strong> &middot; Metaverse Developer Contest &middot; <span class="award-date">2023</span></span>
+                    </li>
+                    <li>
+                        <span><strong>Excellence Award</strong> &middot; KAIST SW Competition &middot; <span class="award-date">2021</span></span>
+                    </li>
+                    <li>
+                        <span><strong>Participation Prize</strong> &middot; WTA Daejeon High-Tech Fair Idea Competition &middot; <span class="award-date">2019</span></span>
+                    </li>
+                    <li>
+                        <span><strong>Finalist</strong> &middot; LG Global Challenger &middot; <span class="award-date">2019</span></span>
+                    </li>
+                    <li>
+                        <span><strong>1st Prize</strong> &middot; National University Student DIY SEM Competition &middot; <span class="award-date">2018</span></span>
+                    </li>
+                    <li>
+                        <span><strong>1st Prize</strong> &middot; COLLATHON &middot; <span class="award-date">2018</span></span>
+                    </li>
+                    <li>
+                        <span><strong>Best Convergent Team</strong> &middot; F1 Model Car Race &middot; <span class="award-date">2018</span></span>
+                    </li>
+                    <li>
+                        <span><strong>1st Prize</strong> &middot; Make-A-Thon Start-up Camp &middot; <span class="award-date">2018</span></span>
+                    </li>
+                </ul>
+            </div>
         </section>
 
         
@@ -409,8 +418,8 @@
                     </div>
                 </div>
                 <!-- Project 2 -->
-                <div class="gallery-card" data-title="MetaReading" data-desc="Developed MetaReading, a social reading platform for children using glasses-based devices, in collaboration with Victoria Productions." data-img="Source/metareadingggif.gif">
-                    <img src="Source/metareadingggif.gif" alt="MetaReading">
+                <div class="gallery-card" data-title="MetaReading" data-desc="Developed MetaReading, a social reading platform for children using glasses-based devices, in collaboration with Victoria Productions." data-img="Source/metareading_loop.mp4">
+                    <video src="Source/metareading_loop.mp4" autoplay loop muted playsinline style="width: 100%; aspect-ratio: 16/9; object-fit: cover;"></video>
                     <div class="card-overlay">
                         <h3>MetaReading</h3>
                     </div>
@@ -634,21 +643,20 @@
 
 
     <script>
-        document.getElementById('toggle-awards-btn').addEventListener('click', function() {
-            const awardsSection = document.getElementById('awards');
-            const isExpanded = awardsSection.classList.contains('expanded');
-            const title = document.getElementById('awards-title');
-            
-            if (!isExpanded) {
-                awardsSection.classList.add('expanded');
-                this.innerHTML = 'Show less &uarr;';
-                title.innerHTML = '<i class="fas fa-trophy"></i> Honors & Awards';
-            } else {
-                awardsSection.classList.remove('expanded');
-                this.innerHTML = 'View 8 earlier awards &darr;';
-                title.innerHTML = '<i class="fas fa-trophy"></i> Selected Honors & Awards';
-            }
-        });
+        const toggleOtherAwardsBtn = document.getElementById('toggle-other-awards-btn');
+        const otherAwardsContainer = document.getElementById('other-awards-container');
+        if (toggleOtherAwardsBtn && otherAwardsContainer) {
+            toggleOtherAwardsBtn.addEventListener('click', function() {
+                const isHidden = otherAwardsContainer.style.display === 'none';
+                if (isHidden) {
+                    otherAwardsContainer.style.display = 'block';
+                    this.innerHTML = 'Hide Other Awards &uarr;';
+                } else {
+                    otherAwardsContainer.style.display = 'none';
+                    this.innerHTML = 'View Other Awards (9) &darr;';
+                }
+            });
+        }
     </script>
 
     <script>
