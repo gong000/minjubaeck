@@ -1887,3 +1887,19 @@ h1, h2, .card-section-title, .about-text h1, .about-text h2 {
     color: #15803d;
     border: 1px solid #dcfce7;
 }
+
+
+/* Category Badges on Left with uniform column alignment */
+.award-cat-tag {
+    display: inline-block !important;
+    font-size: 0.72rem !important;
+    font-weight: 600 !important;
+    padding: 1px 7px !important;
+    border-radius: 6px !important;
+    margin-right: 10px !important;
+    margin-left: 0 !important;
+    min-width: 66px !important;
+    text-align: center !important;
+    vertical-align: middle !important;
+    letter-spacing: 0.3px !important;
+}
