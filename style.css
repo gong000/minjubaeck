@@ -360,6 +360,8 @@ footer {
     margin-bottom: 3px;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 4px 0;
 }
 
 .pub-title {
