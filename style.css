@@ -1807,6 +1807,28 @@ h1, h2, .card-section-title, .about-text h1, .about-text h2 {
     letter-spacing: 0.15px;
 }
 
+/* Subtle, refined external links for authors, advisors, labs & community */
+.pub-authors a,
+.stacked-detail a,
+.stacked-role a,
+.about-text em a,
+.compact-item-name a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: #cbd5e1;
+    text-underline-offset: 2.5px;
+    transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+.pub-authors a:hover,
+.stacked-detail a:hover,
+.stacked-role a:hover,
+.about-text em a:hover,
+.compact-item-name a:hover {
+    color: var(--accent-color);
+    text-decoration-color: var(--accent-color);
+}
+
 
 .stacked-desc {
     font-size: 14px;
