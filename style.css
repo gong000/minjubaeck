@@ -1811,6 +1811,7 @@ h1, h2, .card-section-title, .about-text h1, .about-text h2 {
 .pub-authors a,
 .stacked-detail a,
 .stacked-role a,
+.stacked-org a,
 .about-text em a,
 .compact-item-name a {
     color: inherit;
@@ -1823,6 +1824,7 @@ h1, h2, .card-section-title, .about-text h1, .about-text h2 {
 .pub-authors a:hover,
 .stacked-detail a:hover,
 .stacked-role a:hover,
+.stacked-org a:hover,
 .about-text em a:hover,
 .compact-item-name a:hover {
     color: var(--accent-color);
